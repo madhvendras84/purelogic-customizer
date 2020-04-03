@@ -40,7 +40,7 @@ function displays_notice_on_checkout_page() {
 		$_product = $val['data'];
 		if($product_id == $_product->get_id() ) {
 
-			$notice = '<div class="add-custom-notice">Currently, we do not ship this product in India. </div> <a href="'.$product_link.'">View Product</a>';
+			$notice = '<div class="add-custom-notice">We are currently not shipping this product in India.</div> <a href="'.$product_link.'">View Product</a>';
 
 			wc_print_notice( $notice, 'notice' );
 		}
