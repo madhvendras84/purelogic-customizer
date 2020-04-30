@@ -123,5 +123,43 @@ function add_gtm_codes_in_head_tag(){
 		});
 	</script>
 	<?php
-
 }
+
+
+// adding paroller.js for the horizontal parallax effect.
+
+add_action('wp_footer', function(){
+if (is_page ('10133')) { 
+?>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/paroller.js@1.3.1/dist/jquery.paroller.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+$(".vera-verto2 .elementor-image img").paroller({
+factor: -0.08,
+type: 'foreground', 
+direction: 'horizontal'
+});
+	
+$(".vera-verto1 .elementor-image img").paroller({
+factor: -0.2,
+type: 'foreground', 
+direction: 'horizontal'
+});
+	
+$(".vera-verto .elementor-image img").paroller({
+factor: 0.2,
+type: 'foreground', 
+direction: 'horizontal'
+});
+
+	
+$(".vera-verto-vertical .elementor-image img").paroller({
+factor: 0.6,
+type: 'foreground', 
+direction: 'vertical'
+});
+});	
+</script>
+<?php
+}
+}, 9999);
